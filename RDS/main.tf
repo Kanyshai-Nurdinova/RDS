@@ -9,6 +9,12 @@ resource "aws_rds_cluster" "aurora_cluster" {
   backup_retention_period = 7
 }
 
+resource "random_password" "password" {
+  length  = 16
+  special = false
+}
+
+
 # Writer instance
 resource "aws_rds_cluster_instance" "writer" {
   identifier         = var.writer_identifier
