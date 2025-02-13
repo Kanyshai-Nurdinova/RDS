@@ -7,7 +7,7 @@ variable "identifier"{
 
 }
 variable "engine"{
-  default = "aurora_db"
+  default = "aurora-mysql"
 
 }
 variable "engine_version"{
